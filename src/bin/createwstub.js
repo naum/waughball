@@ -3,7 +3,7 @@ import fs from 'fs'
 import readline from 'readline'
 
 const dictfile = '/usr/share/dict/words'
-const wstubout = '../wordstubs.json'
+const wstubout = '../wordstubs4.json'
 
 let goodwords = []
 
@@ -13,7 +13,7 @@ const rl = readline.createInterface({
 })
 
 rl.on('line', (line) => {
-    if (/^\w{1,6}$/.test(line)) {
+    if (/^\w{1,4}$/.test(line)) {
         goodwords.push(line.toLowerCase())
     }
 })
