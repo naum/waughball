@@ -1,17 +1,25 @@
 <script>
-  import wordstubs from './wordstubs12.json'
+  import wordstubs from './wordstubs9.json'
   import { sample } from './lib/neumann.js'
   console.log(`wordstubs.length=${wordstubs.length}`)
   let wordpool = []
+  const captureKeystroke = (ev) => {
+    console.log(`event key: ${ev.key}`)
+    if (ev.key === 'w' || ev.key === 'W') {
+      drawNames()
+    }
+  }
   const drawNames = () => {
     wordpool = []
-    for (let i = 0; i < 48; i += 1) {
+    for (let i = 0; i < 24; i += 1) {
       wordpool.push(sample(wordstubs))
     }
     wordpool = wordpool.sort()
   }
   drawNames()  
 </script>
+
+<svelte:window on:keyup={captureKeystroke} />
 
 <main>
   <h1>waughball</h1>
