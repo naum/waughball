@@ -53,7 +53,7 @@
   h1 {
     color: var(--cemph);
     font-size: 3.16rem;
-    margin-top: 0.75rem;
+    margin-top: 0rem;
     text-shadow: 
       -1px -1px 0 var(--cfg),
       1px -1px 0 var(--cfg),
@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 0;
   }
   main > * {
     padding: 0.5rem 1rem;
