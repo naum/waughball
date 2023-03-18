@@ -1,6 +1,6 @@
 <script>
   import wordstubs from './wordstubs9.json'
-  import { sample } from './lib/neumann.js'
+  import neumann from './lib/neumann.js'
   console.log(`wordstubs.length=${wordstubs.length}`)
   let wordpool = []
   const captureKeystroke = (ev) => {
@@ -12,7 +12,7 @@
   const drawNames = () => {
     wordpool = []
     for (let i = 0; i < 24; i += 1) {
-      wordpool.push(sample(wordstubs))
+      wordpool.push(neumann.sample(wordstubs))
     }
     wordpool = wordpool.sort()
   }
